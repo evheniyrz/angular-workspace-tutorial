@@ -1,0 +1,7 @@
+<p *libRole="role; let f1 = contextField1; let f2 = contextField2; addiditional: false">about-us works!
+    contextField2Value: <b>{{f2}}</b> contextField1Value: <b>{{f1}}</b></p>
+
+<ng-template [libRole]="role" let-f2="contextField2" let-f1="contextField1" [libRoleAddiditional]="true">
+    <p>copy contextField2Value: <b>{{f2}}</b> contextField1Value: <b>{{f1}}</b></p>
+</ng-template>
+<input type="text" [(ngModel)]="role">
