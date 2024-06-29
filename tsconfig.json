@@ -14,14 +14,22 @@
     "declaration": false,
     "experimentalDecorators": true,
     "moduleResolution": "node",
+    "paths": {
+      "@shared/components": [
+        "./dist/shared/components",
+        "./libs/components/src/public-api.ts"
+      ],
+      "@shared/directives": [
+        "./dist/shared/directives",
+        "./libs/directives/src/public-api.ts"
+      ],
+      "@shared/pipes": ["./dist/shared/pipes", "./libs/pipes/src/public-api.ts"]
+    },
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "lib": ["ES2022", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
