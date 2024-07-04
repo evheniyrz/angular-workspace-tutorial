@@ -1,0 +1,181 @@
+:host {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  background-image: url(/assets/fjord.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+  $blured-panel-offset: 65%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgb(0 0 0 / 55%);
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0 $blured-panel-offset 0 0;
+    background-color: rgb(255 255 255 / 45%);
+    // box-shadow: 0 0 3px 0 #000000;
+    backdrop-filter: blur(7px);
+    z-index: 2;
+  }
+
+  section.content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        270deg,
+        rgb(255, 255, 255) 0% $blured-panel-offset,
+        transparent $blured-panel-offset
+      ),
+      center / cover no-repeat url(/assets/fjord.webp);
+    background-clip: text;
+    z-index: 3;
+
+    .content-title {
+      width: 100%;
+      font-size: 240px;
+      font-weight: 900;
+      line-height: 1;
+      color: transparent;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+
+      span {
+        line-height: 0.8;
+
+        &:nth-child(1) {
+          align-self: flex-end;
+          margin-right: $blured-panel-offset;
+          padding-right: 5px;
+        }
+        &:nth-child(2) {
+          align-self: flex-start;
+          margin-left: calc(100% - $blured-panel-offset);
+        }
+      }
+    }
+
+    .tour-desription {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 20px;
+      max-width: calc(100% - $blured-panel-offset);
+      color: rgb(255, 255, 255);
+      padding-left: 80px;
+      padding-bottom: 40px;
+      .slider-navigation {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 20px;
+
+        .slide-switch-container {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          span.slider-index {
+            font-size: 50px;
+            color: rgb(255 255 255 / 75%);
+          }
+          .slider-arrow {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 5px;
+            font-size: 20px;
+            color: rgb(255 255 255 / 35%);
+
+            span.arrow {
+              rotate: 90deg;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .slider-dots {
+          display: flex;
+          justify-content: flex-end;
+          gap: 5px;
+
+          span {
+            width: 10px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            border: 1px solid rgb(255 255 255 / 45%);
+
+            &.active {
+              background-color: rgb(255, 255, 255);
+              margin-right: auto;
+            }
+          }
+        }
+      }
+
+      .tour-description-content {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        gap: 30px;
+        text-transform: uppercase;
+
+        * {
+          margin: 0;
+        }
+
+        .description-title {
+          font-size: 40px;
+          font-weight: 500;
+        }
+
+        p.decritption-content {
+          text-transform: none;
+          color: rgb(255 255 255 / 45%);
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          font-weight: 500;
+          color: inherit;
+          text-decoration: none;
+
+          span.catalog-navigation-arrow {
+            position: relative;
+            display: inline-block;
+            $container-border-width: 4px;
+            border-top: $container-border-width solid rgb(255, 255, 255);
+            width: 70px;
+
+            &::after {
+              content: "";
+              position: absolute;
+              $border-width: 7px;
+              right: calc($border-width * -2);
+              top: calc(50% - $border-width - ($container-border-width / 2));
+              border: $border-width solid transparent;
+              border-left-color: rgb(255, 255, 255);
+            }
+          }
+        }
+      }
+    }
+  }
+}

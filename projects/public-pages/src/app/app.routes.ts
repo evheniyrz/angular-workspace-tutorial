@@ -16,8 +16,8 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('./pages/about-us/about-us.component').then(
-        (c) => c.AboutUsComponent
+      import('./pages/main-page/main-page.component').then(
+        (c) => c.MainPageComponent
       ),
   },
   {
