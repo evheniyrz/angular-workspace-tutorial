@@ -163,8 +163,9 @@
           span.catalog-navigation-arrow {
             position: relative;
             display: inline-block;
-            $container-border-width: 4px;
+            $container-border-width: 2px;
             border-top: $container-border-width solid rgb(255, 255, 255);
+            border-bottom: $container-border-width solid rgb(255, 255, 255);
             width: 70px;
 
             &::after {
@@ -172,7 +173,7 @@
               position: absolute;
               $border-width: 7px;
               right: calc($border-width * -2);
-              top: calc(50% - $border-width - ($container-border-width / 2));
+              top: calc(50% - $border-width);
               border: $border-width solid transparent;
               border-left-color: rgb(255, 255, 255);
             }
