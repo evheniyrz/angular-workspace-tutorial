@@ -7,6 +7,7 @@
     "start:profile": "ng serve -o --project profile",
     "build:ppublic": "ng build public-pages && cp -a dist/public-pages/. ../../nginx-1.25.3/html/public-pages/",
     "build:profile": "ng build profile && cp -a dist/profile/. ../../nginx-1.25.3/html/profile/",
+    "build:all": "yarn build:ppublic && build:profile",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:public-pages": "node dist/public-pages/server/server.mjs",

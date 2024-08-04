@@ -9,6 +9,6 @@ export const routes: Routes = [
   {
     path: '**',
     loadComponent: () =>
-      import('@shared-lib/components').then((c) => c.RouteErrorPageComponent),
+      import('@shared/components').then((c) => c.RouteErrorPageComponent),
   },
 ];
