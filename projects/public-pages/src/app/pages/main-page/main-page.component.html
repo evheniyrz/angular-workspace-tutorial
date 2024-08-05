@@ -1,2 +1,69 @@
-<!-- <lib-top-slider></lib-top-slider> -->
-<lib-slider></lib-slider>
+<!-- <lib-slider></lib-slider> -->
+<main>
+    <section class="introduction">
+        <h1>INTRODUCTION</h1>
+        <div class="grid-css">
+            <div class="grid-element__1">
+                <div class="subgrid-element__1">Subgrid Element 1</div>
+                <div class="subgrid-element__2">Subgrid Element 2</div>
+                <div class="subgrid-element__3">Subgrid Element 3</div>
+            </div>
+            <div class="grid-element__2">GRID ELEMENT 2</div>
+            <div class="grid-element__3">GRID ELEMENT 3</div>
+            <div class="grid-element__4">GRID ELEMENT 4</div>
+            <div class="grid-element__5">GRID ELEMENT 5</div>
+            <div class="grid-element__6">GRID ELEMENT 6</div>
+            <div class="grid-element__7">GRID ELEMENT 7</div>
+            <div class="grid-element__8">GRID ELEMENT 8</div>
+            <div class="grid-element__9">GRID ELEMENT 9</div>
+            <div class="grid-element__10">GRID ELEMENT 10</div>
+        </div>
+    </section>
+    <section class="flex-compare">
+        <h1>FLEX COMPARE</h1>
+        <div class="flex-container">
+            <div class="flex-item__1">ITEM__1 align-self: stretch;</div>
+            <div class="flex-item__2">ITEM__2 align-self: flex-start;</div>
+            <div class="flex-item__3">ITEM__3</div>
+        </div>
+    </section>
+    <section class="grid-compare">
+        <h1>GRID COMPARE</h1>
+        <div class="grid-container">
+            <div class="grid-item__1">ITEM__1 align-self: stretch;</div>
+            <div class="grid-item__2">ITEM__2 align-self: start;</div>
+            <div class="grid-item__3">ITEM__3</div>
+        </div>
+    </section>
+    <section class="grid-auto-fill">
+        <h1>GRID AUTO_FILL COMPARE <code>repeat(auto-fill, 200px)</code></h1>
+        <div class="grid-container">
+            <div class="grid-item__1">ITEM__1</div>
+            <div class="grid-item__2">ITEM__2</div>
+            <div class="grid-item__3">ITEM__3</div>
+        </div>
+    </section>
+    <section class="grid-auto-fit">
+        <h1>GRID AUTO_FIT COMPARE <code>repeat(auto-fit, minmax(200px, 1fr)</code></h1>
+        <div class="grid-container">
+            <div class="grid-item__1">ITEM__1</div>
+            <div class="grid-item__2">ITEM__2</div>
+            <div class="grid-item__3">ITEM__3</div>
+        </div>
+    </section>
+    <section class="grid-containing-block">
+        <h1>GRID <code>containing block</code> COMPARE <code>position: relative</code></h1>
+        <div class="grid-container">
+            <div class="grid-item__1">ITEM__1</div>
+            <div class="grid-item__2">ITEM__2</div>
+            <div class="grid-item__3">ITEM__3
+                <p>
+                    Этот блок абсолютно позиционирован. В нашем примере грид-контейнер является
+                    контейнерным блоком, поэтому значения сдвига абсолютного позиционирования
+                    отсчитываются от внешнего края той области, в которой размещён элемент.
+                </p>
+            </div>
+            <div class="grid-item__4">ITEM__4</div>
+        </div>
+    </section>
+</main>
