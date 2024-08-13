@@ -1,7 +1,19 @@
-<p *libRole="role; let f1 = contextField1; let f2 = contextField2; addiditional: false">about-us works!
+<!-- <p *libRole="role; let f1 = contextField1; let f2 = contextField2; addiditional: false">about-us works!
     contextField2Value: <b>{{f2}}</b> contextField1Value: <b>{{f1}}</b></p>
 
 <ng-template [libRole]="role" let-f2="contextField2" let-f1="contextField1" [libRoleAddiditional]="true">
     <p>copy contextField2Value: <b>{{f2}}</b> contextField1Value: <b>{{f1}}</b></p>
 </ng-template>
-<input type="text" [(ngModel)]="role">
+<input type="text" [(ngModel)]="role"> -->
+<lib-table [dataSource]="datasource" [displayedColumns]="displayedcolumns">
+    <ng-template libTableHeader="id">ID</ng-template>
+    <ng-template libTableHeader="name">First Name</ng-template>
+    <ng-container *libTableHeader="'dob'">Date of Birthday</ng-container>
+    <span *libTableHeader="'surname'">Last Name</span>
+    <span *libTableHeader="'fullName'" style="color:blueviolet;">Full Name</span>
+    <span *libTableHeader="'age'" style="color: fuchsia;">Age</span>
+
+    <ng-template libTableCell="id" let-row>#{{row.id}}</ng-template>
+    <ng-template libTableCell="fullName" let-row>{{row.name}} {{row.surname}}</ng-template>
+    <ng-template libTableCell="age" let-row>{{ageCalculate(row['dob'])}}</ng-template>
+</lib-table>
