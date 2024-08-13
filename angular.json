@@ -326,6 +326,7 @@
               "projects/catalog/src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/catalog/src/styles.scss"
             ],
             "scripts": [],
@@ -391,6 +392,7 @@
               "projects/catalog/src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/catalog/src/styles.scss"
             ],
             "scripts": []
