@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start:ppublic": "ng serve -o --project public-pages --port 4201",
-    "start:profile": "ng serve -o --project profile",
-    "start:catalog": "ng serve -o --project catalog",
+    "start:profile": "ng serve -o --project profile --port 4202",
+    "start:catalog": "ng serve -o --project catalog --port 4203",
     "build:ppublic": "ng build public-pages && cp -a dist/public-pages/. ../../nginx-1.25.3/html/public-pages/",
     "build:profile": "ng build profile && cp -a dist/profile/. ../../nginx-1.25.3/html/profile/",
     "build:catalog": "ng build catalog && cp -a dist/catalog/. ../../nginx-1.25.3/html/catalog/",

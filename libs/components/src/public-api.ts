@@ -4,5 +4,4 @@
 export * from './lib/route-error-page/route-error-page.component';
 export * from './lib/slider/slider.component';
 export * from './lib/table/table.component';
-export * from './lib/prodcut-card/prodcut-card.component';
 export * from './lib/cards-grid/cards-grid.component';

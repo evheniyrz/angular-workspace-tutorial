@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ProdcutCardComponent } from '@shared/components';
+import { CardsGridComponent } from '@shared/components';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ProdcutCardComponent],
+  imports: [RouterOutlet, CardsGridComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

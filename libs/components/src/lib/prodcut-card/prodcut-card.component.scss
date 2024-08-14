@@ -1,17 +1,20 @@
 :host {
   display: block;
-  width: 270px;
+  width: 100%;
+  max-width: 270px;
   padding-top: 45px;
 
   .product-info {
     display: flex;
     flex-flow: column nowrap;
     position: relative;
-    background-color: rgb(252, 165, 133);
+    // background-color: rgb(252, 165, 133);
+    background-color: #ffffff;
+    box-shadow: var(--mdc-elevated-card-container-elevation);
     padding: 20px 30px 20px 20px;
     border-radius: 20px;
 
-    .rounded-product-image{
+    .rounded-product-image {
       position: absolute;
       top: -45px;
       display: block;
@@ -61,8 +64,6 @@
       overflow: hidden;
     }
 
-
-
     .product-card-action-and-price {
       display: flex;
       justify-content: space-between;
@@ -72,20 +73,20 @@
         flex-flow: column;
         font-weight: bold;
 
-        .old-price{
+        .old-price {
           text-decoration: line-through;
         }
 
-        .discount-price{
+        .discount-price {
           color: #ff0000;
         }
 
-        .product-weight{
+        .product-weight {
           color: rgba($color: #000000, $alpha: 0.3);
         }
       }
 
-      .product-add-button{
+      .product-add-button {
         align-self: flex-end;
       }
     }
