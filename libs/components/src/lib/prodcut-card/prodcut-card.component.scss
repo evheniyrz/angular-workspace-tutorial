@@ -1,17 +1,23 @@
 :host {
-  display: grid;
+  display: block;
   width: 270px;
+  padding-top: 45px;
 
   .product-info {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
     background-color: rgb(252, 165, 133);
     padding: 20px 30px 20px 20px;
     border-radius: 20px;
 
-    & > * {
-      grid-column-start: 2;
-      grid-column-end: 3;
+    .rounded-product-image{
+      position: absolute;
+      top: -45px;
+      display: block;
+      border-radius: 50%;
+      width: 50%;
+      filter: drop-shadow(1px 1px 5px rgba($color: #000000, $alpha: 0.3));
     }
 
     .product-rating {
@@ -48,18 +54,40 @@
     }
 
     .product-title {
-      grid-column-start: 1;
-      grid-column-end: 3;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      line-clamp: 2;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
     }
 
-    .product-pricing {
+
+
+    .product-card-action-and-price {
       display: flex;
-      flex-flow: column;
-    }
+      justify-content: space-between;
 
-    .product-card-button-box {
-      grid-column-start: 1;
-      grid-column-end: 2;
+      .product-pricing {
+        display: flex;
+        flex-flow: column;
+        font-weight: bold;
+
+        .old-price{
+          text-decoration: line-through;
+        }
+
+        .discount-price{
+          color: #ff0000;
+        }
+
+        .product-weight{
+          color: rgba($color: #000000, $alpha: 0.3);
+        }
+      }
+
+      .product-add-button{
+        align-self: flex-end;
+      }
     }
   }
 }
