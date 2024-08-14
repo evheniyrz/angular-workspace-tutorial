@@ -9,3 +9,4 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './catalog-list-control-panel.component.scss',
 })
 export class CatalogListControlPanelComponent {}
+// create service to handle sorting + filtering + layout switch
