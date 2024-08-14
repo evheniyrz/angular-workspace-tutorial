@@ -1,6 +1,16 @@
 <div class="product-info">
-    <img class="rounded-product-image" src="https://res.cloudinary.com/dez6wqxm3/image/upload/v1723564701/pizza_jva4ri.webp"
-    alt="Prduct Image" width="120">
+    <a (click)="viewProductImage()" class="product-image-container">
+        <picture class="rounded-product-image">
+            <source
+                srcset="https://res.cloudinary.com/dez6wqxm3/image/upload/v1723649694/pizza_jva4ri_c_fill_w_300_h_300_ar_1_1_m7c7ai.webp"
+                media="(max-width: 600px)">
+            <source
+                srcset="https://res.cloudinary.com/dez6wqxm3/image/upload/v1723649695/pizza_jva4ri_c_fill_w_500_h_500_ar_1_1_cutij5.webp"
+                media="(max-width: 1200px)">
+            <img src="https://res.cloudinary.com/dez6wqxm3/image/upload/v1723564701/pizza_jva4ri.webp"
+                alt="Prduct Image" width="150">
+        </picture>
+    </a>
     <div class="product-rating">
         <mat-icon aria-hidden="false" aria-label="Rating Star" fontIcon="star" class="rating-star"></mat-icon>
         <div class="rating-count">4.7/5</div>
@@ -11,28 +21,22 @@
         <button mat-stroked-button class="product-add-button"><span>Add</span> <mat-icon aria-hidden="false"
                 aria-label="Add" fontIcon="add" class="add-icon"></mat-icon></button>
 
-                <div class="product-pricing">
-        <span class="old-price">14.00</span><span class="discount-price">$12.00</span><span
-            class="product-weight">/500g</span>
-    </div>
+        <div class="product-pricing">
+            <span class="old-price">14.00</span><span class="discount-price">$12.00</span><span
+                class="product-weight">/500g</span>
+        </div>
     </div>
 </div>
-<!-- <mat-card class="product-card">
-    <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>Shiba Inu</mat-card-title>
-        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-        <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-        </p>
-    </mat-card-content>
-    <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-    </mat-card-actions>
-</mat-card> -->
+
+<ng-template cdkPortalOutlet #selectedPortal="cdkPortalOutlet">
+
+</ng-template>
+
+<ng-template #templatePortalContent>
+    <div class="product-image-popup">
+        <button mat-icon-button color="primary" (click)="closePopup()" class="close-popup">
+            <mat-icon aria-hidden="false" aria-label="Close Popup" fontIcon="close" class="add-icon"></mat-icon>
+        </button>
+        <img src="https://res.cloudinary.com/dez6wqxm3/image/upload/v1723564701/pizza_jva4ri.webp" alt="Pizza">
+    </div>
+</ng-template>
