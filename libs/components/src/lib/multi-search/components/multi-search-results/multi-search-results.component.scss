@@ -1,0 +1,75 @@
+:host {
+  display: block;
+  background-color: #19cfcf;
+  position: absolute;
+  top: 100%;
+  min-width: 100%;
+  z-index: 20;
+
+  /* For browsers that support `scrollbar-*` properties */
+  @supports (scrollbar-color: auto) {
+    ul.filters {
+      background-color: #db5b1b;
+    }
+    ul.filters {
+      scrollbar-color: #7fffd4 rgb(221, 100, 237);
+      scrollbar-width: thin;
+    }
+  }
+
+  /* Otherwise, use `::-webkit-scrollbar-*` pseudo-elements */
+  @supports selector(::-webkit-scrollbar) {
+    ul.filters {
+      background-color: #1bdb21;
+    }
+    div.filters-container ul.filters::-webkit-scrollbar {
+      width: 8px;
+    }
+    div.filters-container ul.filters::-webkit-scrollbar-button {
+      display: none;
+    }
+
+    div.filters-container ul.filters::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      background: #3e3e3e;
+    }
+    div.filters-container ul.filters::-webkit-scrollbar-track {
+      background: #cccccc;
+    }
+  }
+
+  .filters-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 1s ease-in-out;
+
+    ul.filters {
+      padding: 0;
+      margin: 0;
+      max-height: 160px;
+      overflow: hidden;
+    }
+  }
+
+  .lable-expand-checkbox:has(input[name="expand-checkbox"]:checked)
+    + .filters-container {
+    grid-template-rows: 1fr;
+
+    ul.filters {
+      animation: overflowScrollAnimation 0.3s linear 1s forwards;
+    }
+  }
+}
+
+@keyframes overflowScrollAnimation {
+  0% {
+    overflow: hidden;
+  }
+  99% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: auto;
+  }
+}

@@ -1,25 +1,25 @@
 import { Component, output } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MultiSearchFormComponent } from './components/multi-search-form/multi-search-form.component';
+import { MultiSearchResultsComponent } from './components/multi-search-results/multi-search-results.component';
 
 @Component({
   selector: 'lib-multi-search',
   standalone: true,
-  imports: [ReactiveFormsModule, MatIconModule, MatButtonModule],
+  imports: [MultiSearchFormComponent, MultiSearchResultsComponent],
   templateUrl: './multi-search.component.html',
-  styleUrl: './multi-search.component.scss'
+  styleUrl: './multi-search.component.scss',
 })
 export class MultiSearchComponent {
-  onSearchSubmit = output<FormData>();
-  public multi_searchForm: FormGroup<{ multi_search: FormControl<string | null>; }> = new FormGroup({
-    multi_search: new FormControl('', { validators: [Validators.required] })
-  });
-
-  public submitForm(ev: SubmitEvent) {
-    console.log({ F: ev.target });
-    const formData = new FormData(ev.target as HTMLFormElement);
-    this.onSearchSubmit.emit(formData);
+  parseFormData(data: FormData) {
+    console.log({ D: JSON.stringify(data.entries()) });
   }
 }
 //https://api.multisearch.io/?id=10011&lang=uk&m=1725794242135&q=vwft5d&query=high%20power&s=mini&uid=bdf8275d-337f-4cc5-9ade-07edc88b46bb
