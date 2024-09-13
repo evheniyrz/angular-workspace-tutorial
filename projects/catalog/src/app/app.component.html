@@ -1,4 +1,7 @@
-<!-- <lib-prodcut-card></lib-prodcut-card> -->
+<mat-toolbar color="tertiary" class="mat-elevation-z8">
+  <lib-multi-search (onSearchSubmit)="parseFormData($event)"></lib-multi-search>
+</mat-toolbar>
+
 <lib-cards-grid></lib-cards-grid>
 
 <router-outlet />

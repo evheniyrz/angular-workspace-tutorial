@@ -303,12 +303,14 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "standalone": true,
+          "displayBlock": true
         }
       },
       "root": "projects/catalog",
       "sourceRoot": "projects/catalog/src",
-      "prefix": "app",
+      "prefix": "catalog",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",

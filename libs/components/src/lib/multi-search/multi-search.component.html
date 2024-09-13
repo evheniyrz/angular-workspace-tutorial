@@ -1,0 +1,15 @@
+<form [formGroup]="multi_searchForm" (ngSubmit)="submitForm($event)" class="input-search-form">
+  <div class="input-search-wrapper">
+    <input type="text" formControlName="multi_search" name="multi_search" class="search-box"
+      placeholder="Enter search term" />
+  </div>
+  <div class="btn-reset-wrapper">
+    <button mat-icon-button class="btn-reset" type="reset">
+      <mat-icon>cancel</mat-icon>
+    </button>
+  </div>
+  <span class="vertical-divider"></span>
+  <button mat-icon-button type="submit" class="btn-search">
+    <mat-icon>search</mat-icon>
+  </button>
+</form>
