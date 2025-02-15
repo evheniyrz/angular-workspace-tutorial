@@ -9,11 +9,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'lib-multi-search-form',
-  standalone: true,
-  imports: [ReactiveFormsModule, MatIconModule, MatButtonModule],
-  templateUrl: './multi-search-form.component.html',
-  styleUrl: './multi-search-form.component.scss',
+    selector: 'lib-multi-search-form',
+    imports: [ReactiveFormsModule, MatIconModule, MatButtonModule],
+    templateUrl: './multi-search-form.component.html',
+    styleUrl: './multi-search-form.component.scss'
 })
 export class MultiSearchFormComponent {
   onSearchSubmit = output<FormData>();

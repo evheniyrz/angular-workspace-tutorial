@@ -11,11 +11,10 @@ import { MultiSearchFormComponent } from './components/multi-search-form/multi-s
 import { MultiSearchResultsComponent } from './components/multi-search-results/multi-search-results.component';
 
 @Component({
-  selector: 'lib-multi-search',
-  standalone: true,
-  imports: [MultiSearchFormComponent, MultiSearchResultsComponent],
-  templateUrl: './multi-search.component.html',
-  styleUrl: './multi-search.component.scss',
+    selector: 'lib-multi-search',
+    imports: [MultiSearchFormComponent, MultiSearchResultsComponent],
+    templateUrl: './multi-search.component.html',
+    styleUrl: './multi-search.component.scss'
 })
 export class MultiSearchComponent {
   parseFormData(data: FormData) {

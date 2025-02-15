@@ -5,11 +5,10 @@ import { TopSliderComponent } from '../top-slider/top-slider.component';
 register();
 
 @Component({
-  selector: 'lib-slider',
-  standalone: true,
-  imports: [TopSliderComponent],
-  templateUrl: './slider.component.html',
-  styleUrl: './slider.component.scss',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    selector: 'lib-slider',
+    imports: [TopSliderComponent],
+    templateUrl: './slider.component.html',
+    styleUrl: './slider.component.scss',
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SliderComponent {}

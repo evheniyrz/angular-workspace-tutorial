@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'lib-pipes',
-  standalone: true,
-  imports: [],
-  template: `
+    selector: 'lib-pipes',
+    imports: [],
+    template: `
     <p>
       pipes works!
     </p>
   `,
-  styles: ``
+    styles: ``
 })
 export class PipesComponent {
 

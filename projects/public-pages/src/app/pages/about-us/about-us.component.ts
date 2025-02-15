@@ -9,17 +9,16 @@ import {
 } from '@shared/directives';
 
 @Component({
-  selector: 'public-about-us',
-  standalone: true,
-  imports: [
-    FormsModule,
-    NgTemplateOutlet,
-    TableComponent,
-    TableHeaderDirective,
-    TableCellDirective,
-  ],
-  templateUrl: './about-us.component.html',
-  styleUrl: './about-us.component.scss',
+    selector: 'public-about-us',
+    imports: [
+        FormsModule,
+        NgTemplateOutlet,
+        TableComponent,
+        TableHeaderDirective,
+        TableCellDirective,
+    ],
+    templateUrl: './about-us.component.html',
+    styleUrl: './about-us.component.scss'
 })
 export class AboutUsComponent {
   // role = 'admins';

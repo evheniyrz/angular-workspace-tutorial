@@ -18,17 +18,16 @@ import {
 } from '@angular/cdk/portal';
 
 @Component({
-  selector: 'lib-prodcut-card',
-  standalone: true,
-  imports: [
-    MatCardModule,
-    MatButtonModule,
-    MatIconModule,
-    PortalModule,
-    CdkPortalOutlet,
-  ],
-  templateUrl: './prodcut-card.component.html',
-  styleUrl: './prodcut-card.component.scss',
+    selector: 'lib-prodcut-card',
+    imports: [
+        MatCardModule,
+        MatButtonModule,
+        MatIconModule,
+        PortalModule,
+        CdkPortalOutlet,
+    ],
+    templateUrl: './prodcut-card.component.html',
+    styleUrl: './prodcut-card.component.scss'
 })
 export class ProdcutCardComponent {
   @ViewChild('templatePortalContent')

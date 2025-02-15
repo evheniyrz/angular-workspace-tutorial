@@ -9,11 +9,10 @@ import {
 import { TableCellDirective, TableHeaderDirective } from '@shared/directives';
 
 @Component({
-  selector: 'lib-table',
-  standalone: true,
-  imports: [NgTemplateOutlet],
-  templateUrl: './table.component.html',
-  styleUrl: './table.component.scss',
+    selector: 'lib-table',
+    imports: [NgTemplateOutlet],
+    templateUrl: './table.component.html',
+    styleUrl: './table.component.scss'
 })
 export class TableComponent {
   @Input() dataSource: { [key: string]: any }[] = [];

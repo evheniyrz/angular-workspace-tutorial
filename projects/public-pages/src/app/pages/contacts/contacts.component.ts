@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'public-contacts',
-  standalone: true,
-  imports: [],
-  templateUrl: './contacts.component.html',
-  styleUrl: './contacts.component.scss',
+    selector: 'public-contacts',
+    imports: [],
+    templateUrl: './contacts.component.html',
+    styleUrl: './contacts.component.scss'
 })
 export class ContactsComponent {}

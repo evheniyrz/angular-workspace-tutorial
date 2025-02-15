@@ -5,16 +5,15 @@ import { MultiSearchComponent } from '@shared/components';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    RouterOutlet,
-    CardsGridComponent,
-    MultiSearchComponent,
-    MatToolbarModule,
-  ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+    selector: 'app-root',
+    imports: [
+        RouterOutlet,
+        CardsGridComponent,
+        MultiSearchComponent,
+        MatToolbarModule,
+    ],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'catalog';
