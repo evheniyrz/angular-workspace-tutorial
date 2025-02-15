@@ -1,0 +1,89 @@
+:host {
+  display: block;
+
+  .lable-expand-checkbox {
+    display: grid;
+    grid-template-columns: auto 1fr 0fr 1fr;
+    gap: 15px;
+    align-items: center;
+    justify-items: start;
+    padding: 12px;
+    border-bottom: 1px solid #add8e6;
+    cursor: pointer;
+
+    input#expand-checkbox {
+      visibility: hidden;
+    }
+
+    span.total-counter {
+      background-color: #add8e6;
+      border-radius: 8px;
+      min-width: 32px;
+      padding: 0 5px;
+      text-align: center;
+      justify-self: end;
+      // margin-inline-end: 18px;
+      font-size: 15px;
+    }
+  }
+
+  .filters-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 1s ease-in-out;
+
+    ul.filters {
+      padding: 0;
+      margin: 0;
+      max-height: 160px;
+      scrollbar-gutter: stable;
+      overflow: hidden;
+
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+      // &::-webkit-scrollbar-button {
+      //   width: 5px;
+      //   height: 5px;
+      // }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background: #3e3e3e;
+      }
+      &::-webkit-scrollbar-track {
+        background: rgba(204, 204, 204, 0.5);
+      }
+
+      @supports not (selector(::-webkit-scrollbar)) {
+        scrollbar-color: #3e3e3e #cccccc;
+        scrollbar-width: thin;
+      }
+    }
+  }
+
+  .lable-expand-checkbox:has(input[name="expand-checkbox"]:checked)
+    + .filters-container {
+    grid-template-rows: 1fr;
+
+    ul.filters {
+      animation: overflowScrollAnimation 0.3s linear 1s forwards;
+    }
+  }
+}
+
+@keyframes overflowScrollAnimation {
+  0% {
+    overflow: hidden;
+  }
+  99% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: auto;
+  }
+}
+
+// 1 434 612 781
+// cpwp4926
